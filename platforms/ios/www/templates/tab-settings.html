@@ -1,0 +1,18 @@
+<ion-view view-title="{{'Settings'|translate}}">
+  <ion-content>
+    <ion-list>
+      <ion-toggle ng-model="enableProxy.checked"
+                  ng-change="enableProxyChange()">
+        {{'Enable Proxy'|translate}}
+      </ion-toggle>
+
+      <ion-radio ng-model="preferredLanguage" ng-value="'en-US'" ng-change="setLang('en-US')">Use English in this APP</ion-radio>
+      <ion-radio ng-model="preferredLanguage" ng-value="'zh-CN'" ng-change="setLang('zh-CN')">使用中文</ion-radio>
+
+
+    </ion-list>
+    <div class="item item-body">
+      <a href="#agreement"><h2>{{'End User Agreement'|translate}}</h2></a>
+    </div>
+  </ion-content>
+</ion-view>

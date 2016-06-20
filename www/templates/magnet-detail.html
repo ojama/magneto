@@ -1,0 +1,33 @@
+<ion-view view-title="{{'Magnet Detail'|translate}}">
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item">
+        <h2>{{magnet.name}}</h2>
+      </div>
+
+      <div class="item">
+        <h2>{{'Information'|translate}}</h2>
+        <p>{{'Hash'|translate}}:{{magnet.hash}}</p>
+        <p>{{'Number of Files'|translate}}:{{magnet.fileNumber}}</p>
+        <p>{{'Content Size'|translate}}:{{magnet.contentSize}}</p>
+        <p>{{'Convert On'|translate}}:{{magnet.convertDate}}</p>
+        <p>
+        <div class="button-bar bar-calm">
+          <a class="button" ng-click="copyMagnetLink();">{{'Copy'|translate}}</a>
+          <a class="button" ng-click="favouriteMagnetLink();">{{'Favourite'|translate}}</a>
+          <a class="button" ng-click="shareMagnetLink();">{{'Share'|translate}}</a>
+        </div>
+        </p>
+      </div>
+
+      <div class="item">
+        <h2>{{'File List'|translate}}</h2>
+        <p ng-repeat="file in magnet.fileList">
+          {{file.name}}
+          <span class="icon-right">{{file.size}}</span>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

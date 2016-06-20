@@ -1,0 +1,27 @@
+<ion-view view-title="{{'Serach Magnet Links'|translate}}">
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input ng-model="form.keyword" type="text" placeholder="{{'Type keywords here'|translate}}">
+                </label>
+                <button class="button button-calm button-small" ng-click="doSearch();">
+                    {{'Search'|translate}}
+                </button>
+            </div>
+
+        </div>
+        <div class="list hide">
+            <span ng-click="showBlackWordSubmitForm();" style="float: right;color: #d00000;text-decoration: underline;">{{'Show black word submit form'|translate}}</span>
+        </div>
+        <ion-list>
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="magnet in magnets" type="item-text-wrap"
+                      href="#/tab/detail/{{magnet.hash}}">
+                <h2>{{magnet.name}}</h2>
+                <p>{{magnet.sizeDate}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

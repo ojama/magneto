@@ -1,0 +1,14 @@
+<ion-view view-title="{{'Favourite'|translate}}">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="magnet in magnets" type="item-text-wrap" href="#/tab/detail/{{magnet.hash}}">
+        <h2>{{magnet.name}}</h2>
+        <p>{{magnet.sizeDate}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <div ng-if="magnets.length==0">
+      <a href="#/tab/search">{{'Search Magnets Link'|translate}}</a>
+    </div>
+  </ion-content>
+</ion-view>
